@@ -2,9 +2,10 @@
   font-family: 'Rubik', sans-serif
   src: url('https://fonts.googleapis.com/css?family=Rubik:300,400,500')
 
-$fontcolor: #fff2d1
-$bgcolor: mix(#252525, $fontcolor, 95)
-$altcolor: #b5a67f
+$lightgreen: #c6dec0
+$neutralgreen: #8acd94
+$darkgreen: #63A088
+$bgcolor: mix(#252525, #0e4b60, 80)
 
 $headerheight: 70px
 $footerheight: 50px
@@ -19,7 +20,7 @@ body
   margin: 0
   font-size: 16px
   background-color: $bgcolor
-  color: $fontcolor
+  color: $lightgreen
 
 
 h1
@@ -71,7 +72,7 @@ p
 
     a.nav_link
       text-decoration: none
-      color: $fontcolor
+      color: $lightgreen
       font-size: 0.8rem
       font-weight: 300
       letter-spacing: 0.2em
@@ -85,15 +86,16 @@ p
   margin: 0 auto
   justify-content: center
   box-sizing: border-box
+  font-size: 1.1rem
 
   .s_item
     display: flex
     align-items: center
     justify-content: center
     width: 100%
-    max-width: 60px
+    max-width: 4em
 
     a
       font-size: 1.4em
       text-decoration: none
-      color: $fontcolor
+      color: $neutralgreen
