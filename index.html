@@ -7,23 +7,46 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/src/style.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.15/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.2/velocity.min.js"></script>
 </head>
 <body>
   <div id="app">
 
+    <div id="fadeIn"></div>
+
     <div id="header">
       <div class="navigation">
         <div class="h_item">
-          <a class="nav_link" href="#">About</a>
+          <a class="nav_link" v-on:click="showAbout">About</a>
         </div>
         <div class="h_item">
-          <a class="logo" href="#"><img src="/img/CSGreen.svg" alt=""></a>
+          <a class="logo"><img src="/img/CSGreen.svg" alt=""></a>
         </div>
         <div class="h_item">
-          <a class="nav_link" href="#">Contact</a>
+          <a class="nav_link" v-on:click="showContact">Contact</a>
         </div>
       </div>
     </div>
+
+    <div id="music">
+
+    </div>
+
+    <transition name="infofade">
+      <div id="about" class="infoContainer" v-show="aboutBox == true" v-on:click="hideAbout">
+        <div class="infoBox" v-on:click.stop>
+
+        </div>
+      </div>
+    </transition>
+
+    <transition name="infofade">
+      <div id="contact" class="infoContainer" v-show="contactBox == true" v-on:click="hideContact">
+        <div class="infoBox" v-on:click.stop>
+
+        </div>
+      </div>
+    </transition>
 
     <div id="footer">
       <div class="social">
