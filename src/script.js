@@ -41,7 +41,7 @@ var vm = new Vue({
     loadTrack: function(track) {
       document.getElementById('custompause').classList.remove('hidden');
       widget.bind('SC.Widget.Event[PLAY]', this.justPlay());
-      widget.load(track + "&color=%238ACD94&auto_play=true&inverse=true");
+      widget.load(track + "&color=%2363a088&auto_play=true");
     }
   },
   mounted: function() {

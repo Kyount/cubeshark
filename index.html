@@ -16,21 +16,18 @@
     <div id="fadeIn"></div>
 
     <div id="header">
+      <div class="logotitle">
+        <a class="logo"><img src="/img/CSOutline.svg" alt=""></a>
+        <div class="title">CUBESHARK</div>
+      </div>
       <div class="navigation">
         <div class="h_item">
           <a class="nav_link" @click="showAbout">About</a>
         </div>
         <div class="h_item">
-          <a class="logo"><img src="/img/CSGreen.svg" alt=""></a>
-        </div>
-        <div class="h_item">
           <a class="nav_link" @click="showContact">Contact</a>
         </div>
       </div>
-    </div>
-
-    <div id="bigbox">
-      <div class="bigimg" style="background-image:url('http://placehold.it/1920x1080/202d31/63a088')"></div>
     </div>
 
     <div id="player" style="display:none">
@@ -45,15 +42,20 @@
       </div>
     </div>
 
-    <div id="music">
-      <div class="soundBox">
-        <div class="soundLink">
-          <a @click="loadTrack('https://soundcloud.com/cubeshark/unused-tv-intro', $event)"><i class="playbutton fas fa-play"></i></a>
-        </div>
+    <div id="itunes">
+      <div id="bigbox">
+        <div class="bigimg" style="background-image:url('http://placehold.it/1920x1080/252525/FFFFFF')"></div>
       </div>
-      <div class="soundBox">
-        <div class="soundLink">
-          <a @click="loadTrack('https://soundcloud.com/cubeshark/grace', $event)"><i class="playbutton fas fa-play"></i></a>
+      <div id="music">
+        <div class="soundBox">
+          <div class="soundLink">
+            <a @click="loadTrack('https://soundcloud.com/cubeshark/unused-tv-intro', $event)"><i class="playbutton fas fa-play"></i></a>
+          </div>
+        </div>
+        <div class="soundBox">
+          <div class="soundLink">
+            <a @click="loadTrack('https://soundcloud.com/cubeshark/grace', $event)"><i class="playbutton fas fa-play"></i></a>
+          </div>
         </div>
       </div>
     </div>
