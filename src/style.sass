@@ -41,11 +41,13 @@ $breakpoints: (small: 320px, medium: 768px, large: 1024px)
 
 html
   width: 100%
+  height: 100%
   background-color: $bgcolor
 
 body
   font-family: 'Rubik'
   width: 100%
+  height: 100%
   min-width: 380px
   margin: 0
   font-size: 16px
@@ -249,6 +251,7 @@ p
   position: absolute
   width: 100%
   height: calc(100% - #{$contentmargin} - #{$footerheight})
+  min-height: 200px
   margin-top: $contentmargin
   flex-direction: row
   @include media("<=medium")
