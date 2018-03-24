@@ -36,7 +36,7 @@
         <div id="hackmask" v-if="firstStart == false"></div>
       </transition>
       <div id="playerframe">
-        <iframe id="iframe" width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay"
+        <iframe id="iframe" onload="console.log('loaded')" width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay"
           src="https://w.soundcloud.com/player/?url=null"
         src=""></iframe>
       </div>
@@ -85,6 +85,7 @@
     <transition name="infofade">
       <div id="about" class="infoContainer" v-show="aboutBox == true" v-on:click="hideAbout">
         <div class="infoBox" v-on:click.stop>
+          <div class="closeInfo" v-on:click="hideAbout"><i class="fas fa-window-close"></i></div>
           <h1>ABOUT</h1>
         </div>
       </div>
@@ -93,6 +94,7 @@
     <transition name="infofade">
       <div id="contact" class="infoContainer" v-show="contactBox == true" v-on:click="hideContact">
         <div class="infoBox" v-on:click.stop>
+          <div class="closeInfo" v-on:click="hideContact"><i class="fas fa-window-close"></i></div>
           <h1>CONTACT</h1>
         </div>
       </div>

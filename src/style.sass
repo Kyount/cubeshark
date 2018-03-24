@@ -21,13 +21,14 @@ $lightcolor: #252525
 $neutralcolor: #252525
 $darkcolor: #CCCCCC
 $bgcolor: #FFFFFF
+$accentcolor: #17936f
 
 $headerheight: 70px
 $footerheight: 50px
 
 $contentmargin: $headerheight + 20px
 
-$breakpoints: (small: 320px, medium: 768px, large: 1024px)
+$breakpoints: (small: 360px, medium: 768px, large: 1024px)
 
 html
   width: 100%
@@ -38,7 +39,7 @@ body
   font-family: 'Rubik'
   width: 100%
   height: 100%
-  min-width: 380px
+  min-width: 360px
   margin: 0
   font-size: 16px
   background-color: $bgcolor
@@ -124,11 +125,10 @@ p
   display: block
   position: fixed
   height: $footerheight
-  bottom: 0px
+  bottom: 20px
   width: 100%
-  z-index: 101
   pointer-events: none
-  // background: linear-gradient(to top, rgba($bgcolor, 1) 0%, rgba($bgcolor, 1) 50%, rgba($bgcolor, 0) 100%)
+  background: linear-gradient(to top, rgba($bgcolor, 1) 0%, rgba($bgcolor, 1) 50%, rgba($bgcolor, 0) 100%)
 
 
 .social
@@ -173,33 +173,49 @@ p
   height: 100%
   z-index: 100
   margin: 0 auto
-  background-color: transparentize(darken($lightcolor, 40), 0.5)
+  padding: 0px 20px
+  box-sizing: border-box
+  // background-color: transparentize($lightcolor, 0.5)
 
   .infoBox
     display: block
     width: 100%
     max-width: 600px
-    height: calc(100% - #{$contentmargin} - #{$footerheight} - 40px)
-    margin-top: $contentmargin + 40px
-    margin-bottom: $footerheight
+    height: calc(80% - #{$contentmargin} - #{$footerheight} - 40px)
+    min-height: 400px
+    margin-top: $contentmargin + 20px
+    margin-bottom: $footerheight + 20px
     margin-left: auto
     margin-right: auto
-    background-color: $lightcolor
-    color: $bgcolor
-    // border: 2px solid $neutralcolor
+    background-color: $bgcolor
+    color: $lightcolor
+    border: 2px solid $neutralcolor
     box-sizing: border-box
-    // box-shadow: 0px 0px 5px 5px $bgcolor
+    box-shadow: 40px 40px 0px 0px rgba($lightcolor, 0.2)
+
+    .closeInfo
+      width: 100%
+      font-size: 2em
+      padding-top: 10px
+      padding-right: 10px
+      margin: 0px
+      text-align: right
+      box-sizing: border-box
+      display: block
+
+      svg
+        cursor: pointer
 
 #player
   display: block
   position: fixed
-  bottom: $footerheight
+  bottom: 0px
   left: -20px
   height: 20px
   width: calc(100% + 100px + 20px)
   overflow: hidden
   background-color: $bgcolor
-  z-index: 101
+  z-index: 100
 
   #hackmask
     display: block
@@ -213,14 +229,15 @@ p
     display: block
     opacity: 1
     position: fixed
-    bottom: 8px
+    bottom: 28px
     left: 8px
     width: 40px
     height: 40px
-    background-color: $neutralcolor
+    background-color: $lightcolor
     transition: opacity 0.5s
     cursor: pointer
     border-radius: 3px
+    z-index: 101
 
     &.hidden
       pointer-events: none
@@ -251,6 +268,7 @@ p
   display: flex
   position: absolute
   width: 100%
+  min-width: 360px
   height: calc(100% - #{$contentmargin} - #{$footerheight})
   margin-top: $contentmargin
   flex-direction: row
@@ -347,14 +365,14 @@ p
 
 //infofade
 .infofade-enter-active, .infofade-leave-active
-  transition: opacity 0.5s
+  transition: opacity 0.3s
 
 .infofade-enter, .infofade-leave-to
   opacity: 0
 
 //descslide
 .descslide-enter-active, .descslide-leave-active
-  transition: all 0.7s ease-in-out
+  transition: all 0.5s ease-in-out
 
 .descslide-enter, .descslide-leave-to
   max-height: 0px !important
