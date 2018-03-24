@@ -12,13 +12,13 @@
 
 //dark grey tones
 // $lightcolor: #F6F6F6
-// $neutralcolor: #AAAAAA
+// $neutralcolor: #F6F6F6
 // $darkcolor: #666666
 // $bgcolor: #252525
 
 //light grey tones
 $lightcolor: #252525
-$neutralcolor: #444444
+$neutralcolor: #252525
 $darkcolor: #CCCCCC
 $bgcolor: #FFFFFF
 
@@ -28,16 +28,6 @@ $footerheight: 50px
 $contentmargin: $headerheight + 20px
 
 $breakpoints: (small: 320px, medium: 768px, large: 1024px)
-
-/* VUE TRANSITIONS */
-
-.infofade-enter-active, .infofade-leave-active
-  transition: opacity 0.5s
-
-.infofade-enter, .infofade-leave-to
-  opacity: 0
-
-/*********/
 
 html
   width: 100%
@@ -64,7 +54,7 @@ h2
   font-weight: 400
 
 p
-  font-size: 1.2em
+  font-size: 1em
   font-weight: 300
 
 #header
@@ -203,7 +193,7 @@ p
 #player
   display: block
   position: fixed
-  top: $headerheight
+  bottom: $footerheight
   left: -20px
   height: 20px
   width: calc(100% + 100px + 20px)
@@ -223,7 +213,7 @@ p
     display: block
     opacity: 1
     position: fixed
-    top: 8px
+    bottom: 8px
     left: 8px
     width: 40px
     height: 40px
@@ -257,29 +247,44 @@ p
   @include media("<=medium")
     flex-direction: column
 
-  #bigbox
-    display: block
-    position: relative
+#simpleTunes
+  display: flex
+  position: absolute
+  width: 100%
+  height: calc(100% - #{$contentmargin} - #{$footerheight})
+  margin-top: $contentmargin
+  flex-direction: row
+  justify-content: center
+
+#bigbox
+  display: block
+  position: relative
+  width: 100%
+  height: 100%
+  box-sizing: border-box
+  @include media("<=medium")
+    height: 50%
+
+  .bigimg
     width: 100%
     height: 100%
-    box-sizing: border-box
-    @include media("<=medium")
-      height: 50%
+    background-size: cover
+    background-position: center
 
-    .bigimg
-      width: 100%
-      height: 100%
-      background-size: cover
-      background-position: center
+#music
+  display: flex
+  width: 100%
+  height: 100%
+  min-width: 400px
+  flex-basis: 400px
+  flex-direction: column
+  @include media("<=medium")
+    height: 50%
 
-  #music
-    display: flex
-    width: 100%
-    height: 100%
-    flex-basis: 500px
-    flex-direction: column
-    @include media("<=medium")
-      height: 50%
+  .soundBoxWrap
+    border-bottom: 1px solid $lightcolor
+    &:last-child
+      border-bottom: none
 
     .soundBox
       display: flex
@@ -287,13 +292,16 @@ p
       height: 70px
       padding: 10px
       box-sizing: border-box
+      flex-wrap: wrap
 
       .soundLink
+        display: flex
         width: 100%
         height: 100%
         max-width: 50px
-        // background-color: $neutralcolor
+        max-height: 50px
         box-sizing: border-box
+        align-items: center
 
         a
           display: block
@@ -304,8 +312,51 @@ p
           cursor: pointer
 
           svg
-            font-size: 2em
+            font-size: 1.5em
             position: relative
             top: 50%
             left: 50%
             transform: translateY(-50%) translateX(-50%)
+
+      .trackTitle
+        display: flex
+        height: 100%
+        flex-grow: 1
+        max-height: 50px
+        margin-left: 20px
+        cursor: pointer
+
+        span
+          display: flex
+          font-size: 1em
+          align-items: center
+          font-weight: 400
+
+    .trackDesc
+      display: block
+      width: 100%
+      height: 100%
+      max-height: 200px
+      overflow-y: hidden
+
+      p
+        margin: 0px
+        padding: 1em
+
+/* VUE TRANSITIONS */
+
+//infofade
+.infofade-enter-active, .infofade-leave-active
+  transition: opacity 0.5s
+
+.infofade-enter, .infofade-leave-to
+  opacity: 0
+
+//descslide
+.descslide-enter-active, .descslide-leave-active
+  transition: all 0.7s ease-in-out
+
+.descslide-enter, .descslide-leave-to
+  max-height: 0px !important
+
+/*********/

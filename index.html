@@ -37,12 +37,12 @@
       </transition>
       <div id="playerframe">
         <iframe id="iframe" width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/cubeshark/foo&color=%238ACD94"
+          src="https://w.soundcloud.com/player/?url=null"
         src=""></iframe>
       </div>
     </div>
 
-    <div id="itunes">
+    <!-- <div id="itunes">
       <div id="bigbox">
         <div class="bigimg" style="background-image:url('http://placehold.it/1920x1080/252525/FFFFFF')"></div>
       </div>
@@ -56,6 +56,28 @@
           <div class="soundLink">
             <a @click="loadTrack('https://soundcloud.com/cubeshark/grace', $event)"><i class="playbutton fas fa-play"></i></a>
           </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div id="simpleTunes">
+      <div id="music">
+        <div class="soundBoxWrap" v-for="(track, index) in tracks">
+          <div class="soundBox">
+            <div class="soundLink">
+              <a @click="loadTrack('https://soundcloud.com/cubeshark/', index), toggleDescription(index, true)">
+                <i class="playbutton fas fa-play"></i>
+              </a>
+            </div>
+            <div class='trackTitle' @click="toggleDescription(index, false)">
+              <span>{{track.title}}</span>
+            </div>
+          </div>
+          <transition name="descslide">
+            <div class="trackDesc" v-show="track.showDesc">
+              <p>{{track.desc}}</p>
+            </div>
+          </transition>
         </div>
       </div>
     </div>
