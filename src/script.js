@@ -1,4 +1,5 @@
 var widget;
+var mobileInterval;
 
 var vm = new Vue({
   el: '#app',
@@ -43,13 +44,15 @@ var vm = new Vue({
       this.contactBox = false;
     },
     justPlay: function() {
-      console.log('justplay');
+      if (!widget.isPaused() || this.isMobileDevice) {
+          widget.play();
+      }
       this.firstStart = true;
-      widget.play();
       document.querySelector('#custompause svg').classList.add('fa-pause');
       document.querySelector('#custompause svg').classList.remove('fa-play');
     },
     togglePlaying: function() {
+      clearInterval(mobileInterval);
       this.firstStart = true;
       widget.toggle();
       this.playing = !this.playing;
@@ -58,13 +61,15 @@ var vm = new Vue({
     },
     loadTrack: function(track, index) {
       document.getElementById('custompause').classList.remove('hidden');
-      widget.bind('SC.Widget.Event["PLAY"]', this.justPlay());
       //Soundcloud doesn't allow autoplay on mobile... time for desperate measures
       if (this.isMobileDevice) {
         console.log('detected mobile');
-        setTimeout(function() {
+        clearInterval(mobileInterval);
+        mobileInterval = setInterval(function() {
           vm.justPlay();
-        }, 3000);
+        }, 500);
+      } else {
+        widget.bind('SC.Widget.Events["PLAY"]', this.justPlay());
       }
       widget.load(track + this.tracks[index].track + "&color=%238acd94&auto_play=true&inverse=false");
     },
