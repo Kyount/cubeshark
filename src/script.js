@@ -9,18 +9,41 @@ var vm = new Vue({
     playing: false,
     firstStart: false,
     tracks: [
-      {showDesc: false, track: 'grace', title: 'Grace', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'},
-      {showDesc: false, track: 'mind-song', title: 'Mind Song', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'},
-      {showDesc: false, track: 'unused-tv-intro', title: 'Intro Music for Maintitle', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'},
-      {showDesc: false, track: 'startup-promo', title: 'Promo Ambiance for TV Spot', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'},
-      {showDesc: false, track: 'otto-motors-promo', title: 'Music for Conference Visuals', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'},
-      {showDesc: false, track: 'otto-motors-promo', title: 'Music for Conference Visuals', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'},
-      {showDesc: false, track: 'otto-motors-promo', title: 'Music for Conference Visuals', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'},
-      {showDesc: false, track: 'otto-motors-promo', title: 'Music for Conference Visuals', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'},
-      {showDesc: false, track: 'grace', title: 'Grace', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'},
-      {showDesc: false, track: 'mind-song', title: 'Mind Song', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'},
-      {showDesc: false, track: 'unused-tv-intro', title: 'Intro Music for Maintitle', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'},
-      {showDesc: false, track: 'startup-promo', title: 'Promo Ambiance for TV Spot', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'},
+      {
+        showDesc: false,
+        track: 'grace',
+        title: 'Grace',
+        image: 'http://placehold.it/200x200',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+      },
+      {
+        showDesc: false,
+        track: 'mind-song',
+        title: 'Mind Song',
+        image: 'http://placehold.it/200x200',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+      },
+      {
+        showDesc: false,
+        track: 'unused-tv-intro',
+        title: 'Intro Music for Maintitle',
+        image: null,
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+      },
+      {
+        showDesc: false,
+        track: 'startup-promo',
+        title: 'Promo Ambiance for TV Spot',
+        image: null,
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+      },
+      {
+        showDesc: false,
+        track: 'otto-motors-promo',
+        title: 'Music for Conference Visuals',
+        image: null,
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+      }
     ]
   },
   computed: {
