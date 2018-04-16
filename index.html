@@ -72,6 +72,7 @@
             <div class='trackTitle' @click="toggleDescription(index, false)">
               <span>{{track.title}}</span>
             </div>
+            <div class="trackCategory"><span>{{track.cat}}</span></div>
           </div>
           <transition name="descslide">
             <div class="trackDesc" v-show="track.showDesc">

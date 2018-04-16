@@ -1,5 +1,103 @@
 var widget;
 var mobileInterval;
+var trackList = [
+  {
+    showDesc: false,
+    track: 'grace',
+    title: 'Grace',
+    image: '/img/SevenYears.jpg',
+    cat: 'Music',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+  },
+  {
+    showDesc: false,
+    track: 'silence-thumping',
+    title: 'Silence Thumping',
+    image: '/img/SevenYears.jpg',
+    cat: 'Music',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+  },
+  {
+    showDesc: false,
+    track: 'the-journey',
+    title: 'The Journey',
+    image: '/img/SevenYears.jpg',
+    cat: 'Music',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+  },
+  {
+    showDesc: false,
+    track: 'the-seventh-year',
+    title: 'The Seventh Year',
+    image: '/img/SevenYears.jpg',
+    cat: 'Music',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+  },
+  {
+    showDesc: false,
+    track: 'mouthwash',
+    title: 'Mouthwash',
+    image: '/img/RoughDrafts.jpg',
+    cat: 'Music',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+  },
+  {
+    showDesc: false,
+    track: 'chaos-control',
+    title: 'Chaos Control',
+    image: '/img/RoughDrafts.jpg',
+    cat: 'Music',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+  },
+  {
+    showDesc: false,
+    track: 'exterminator-final',
+    title: 'Exterminator Project',
+    image: null,
+    cat: 'Video Game',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+  },
+  {
+    showDesc: false,
+    track: 'maintitle-intro',
+    title: 'Dr. Max: Maintitle',
+    image: null,
+    cat: 'Soundtrack',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+  },
+  {
+    showDesc: false,
+    track: 'oceana-intro',
+    title: 'Oceana: Studio Logo',
+    image: null,
+    cat: 'Soundtrack',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+  },
+  {
+    showDesc: false,
+    track: 'startup-promo',
+    title: 'Sony Crackle: Startup',
+    image: null,
+    cat: 'Soundtrack',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+  },
+  {
+    showDesc: false,
+    track: 'otto-motors-promo',
+    title: 'Otto Motors',
+    image: null,
+    cat: 'Soundtrack',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+  },
+  {
+    showDesc: false,
+    track: 'creation-destruction',
+    title: 'Creation Destruction',
+    image: null,
+    cat: 'Soundtrack',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+  }
+];
 
 var vm = new Vue({
   el: '#app',
@@ -8,43 +106,7 @@ var vm = new Vue({
     contactBox: false,
     playing: false,
     firstStart: false,
-    tracks: [
-      {
-        showDesc: false,
-        track: 'grace',
-        title: 'Grace',
-        image: 'http://placehold.it/200x200',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
-      },
-      {
-        showDesc: false,
-        track: 'mind-song',
-        title: 'Mind Song',
-        image: 'http://placehold.it/200x200',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
-      },
-      {
-        showDesc: false,
-        track: 'unused-tv-intro',
-        title: 'Intro Music for Maintitle',
-        image: null,
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
-      },
-      {
-        showDesc: false,
-        track: 'startup-promo',
-        title: 'Promo Ambiance for TV Spot',
-        image: null,
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
-      },
-      {
-        showDesc: false,
-        track: 'otto-motors-promo',
-        title: 'Music for Conference Visuals',
-        image: null,
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
-      }
-    ]
+    tracks: trackList
   },
   computed: {
     isMobileDevice: function() {
