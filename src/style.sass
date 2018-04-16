@@ -196,6 +196,10 @@ p
     box-sizing: border-box
     box-shadow: 40px 40px 0px 0px rgba($lightcolor, 0.2)
 
+    &.shorter
+      height: calc(60% - #{$contentmargin} - #{$footerheight} - 40px)
+      min-height: 200px
+
     .md
       display: block
       position: absolute
@@ -203,7 +207,7 @@ p
       height: calc(100% - 4em)
       padding: 1em
       box-sizing: border-box
-      overflow-y: scroll
+      overflow-y: auto
 
     .closeInfo
       width: 100%

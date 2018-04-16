@@ -100,13 +100,11 @@
 
     <transition name="infofade">
       <div id="contact" class="infoContainer" v-show="contactBox == true" v-on:click="hideContact">
-        <div class="infoBox" v-on:click.stop>
+        <div class="infoBox shorter" v-on:click.stop>
           <div class="closeInfo" v-on:click="hideContact"><i class="fas fa-window-close"></i></div>
-          <div class="md">
-            <h1>CONTACT INFORMATION</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit nulla et ante sagittis imperdiet. Suspendisse convallis dignissim turpis, a auctor justo ornare sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris rhoncus laoreet neque, fermentum efficitur nisl fringilla vel. Morbi vitae varius metus. Praesent in tempor orci. Praesent sit amet lorem justo. Etiam nec posuere diam. In porttitor cursus luctus.</p>
-            <p>Nunc tempus, mauris nec ultrices vestibulum, lectus mi commodo sapien, in scelerisque ipsum nibh ac turpis. Fusce sagittis massa quis lobortis convallis. Maecenas imperdiet risus condimentum aliquam faucibus. Ut in ipsum nec ipsum cursus rhoncus id sit amet magna. Mauris sit amet lacinia nulla. Donec eu tortor nec risus hendrerit fermentum non vel magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet faucibus arcu, eu egestas magna. Duis a mauris gravida, aliquam enim dictum, mattis diam. Mauris facilisis nisl sit amet risus dictum fringilla. Nulla volutpat quam libero, et dignissim lorem commodo et. Mauris eu rhoncus nisi. Nam imperdiet, ligula eget congue aliquet, ex nulla feugiat nunc, et dignissim nulla mi a magna.</p>
-            <p>Mauris at sapien nibh. Ut in arcu consectetur, tincidunt tortor at, condimentum lectus. Nullam pellentesque, neque sed laoreet tincidunt, lectus ligula tincidunt turpis, et scelerisque lectus dui molestie eros. Etiam feugiat elit sed rutrum dignissim. Nunc posuere massa vitae pretium vestibulum. Praesent aliquam eget dolor vulputate egestas. Donec urna dolor, semper id sagittis ac, dapibus eu mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eros enim, viverra at pharetra eu, bibendum non nisl.</p>
+          <div class="md" style="text-align:center">
+            <h2>For all inquiries, please email:</h2>
+            <h1 style="margin:2rem 0rem"><a style="text-decoration:none;color:#F6F6F6" href="mailto:kyle@cubeshark.net">kyle@cubeshark.net</a></h1>
           </div>
         </div>
       </div>
