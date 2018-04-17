@@ -42,7 +42,7 @@
     </div>
 
     <div id="player" style="display:none">
-      <div id="custompause" class="hidden" @click="togglePlaying"><i class="fas fa-pause"></i></div>
+      <div id="custompause" class="hidden" @click="togglePlaying"><i class="fas fa-play"></i></div>
       <transition name="infofade">
         <div id="hackmask" v-if="firstStart == false"></div>
       </transition>
@@ -121,7 +121,7 @@
           <div class="closeInfo" v-on:click="hideContact"><i class="fas fa-window-close"></i></div>
           <div class="md" style="text-align:center">
             <h2>For all inquiries, please email:</h2>
-            <h1 style="margin:2rem 0rem"><a style="text-decoration:none;color:#F6F6F6" href="mailto:kyle@cubeshark.net">kyle@cubeshark.net</a></h1>
+            <h1 style="margin:1rem 0rem"><a style="text-decoration:none;color:#F6F6F6" href="mailto:kyle@cubeshark.net">kyle@cubeshark.net</a></h1>
           </div>
         </div>
       </div>

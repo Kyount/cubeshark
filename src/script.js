@@ -1,5 +1,6 @@
 var widget;
 var mobileInterval;
+var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
 var trackList = [
   {
     showDesc: false,
@@ -129,15 +130,22 @@ var vm = new Vue({
       this.contactBox = false;
     },
     justPlay: function() {
-      if (!widget.isPaused() || this.isMobileDevice) {
+      console.log("justPlay");
+      if (!widget.isPaused()) {
           widget.play();
       }
+      console.log(isSafari + " " + this.firstStart);
+      if (!isSafari || (isSafari && this.firstStart == true)) {
+        document.querySelector('#custompause svg').classList.add('fa-pause');
+        document.querySelector('#custompause svg').classList.remove('fa-play');
+      } else {
+        document.querySelector('#custompause').classList.add('mobileFlash');
+      }
       this.firstStart = true;
-      document.querySelector('#custompause svg').classList.add('fa-pause');
-      document.querySelector('#custompause svg').classList.remove('fa-play');
     },
     togglePlaying: function() {
-      clearInterval(mobileInterval);
+      document.querySelector('#custompause').classList.remove('mobileFlash');
+      console.log("togglePlaying");
       this.firstStart = true;
       widget.toggle();
       this.playing = !this.playing;
@@ -145,18 +153,18 @@ var vm = new Vue({
       document.querySelector('#custompause svg').classList.toggle('fa-play');
     },
     loadTrack: function(track, index) {
-      document.getElementById('custompause').classList.remove('hidden');
-      //Soundcloud doesn't allow autoplay on mobile... time for desperate measures
       if (this.isMobileDevice) {
         console.log('detected mobile');
-        clearInterval(mobileInterval);
-        mobileInterval = setInterval(function() {
-          vm.justPlay();
-        }, 500);
+        var win = window.open(track + this.tracks[index].track,'_blank');
+        win.focus();
       } else {
+        document.querySelector('#custompause svg').classList.add('fa-play');
+        document.querySelector('#custompause svg').classList.remove('fa-pause');
+        console.log("loadTrack");
+        document.getElementById('custompause').classList.remove('hidden');
         widget.bind('SC.Widget.Events["PLAY"]', this.justPlay());
+        widget.load(track + this.tracks[index].track + "&color=%238acd94&auto_play=true&inverse=false");
       }
-      widget.load(track + this.tracks[index].track + "&color=%238acd94&auto_play=true&inverse=false");
     },
     toggleDescription: function(index, exc) {
       for (var i=0; i<this.tracks.length; i++) {

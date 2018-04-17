@@ -184,8 +184,8 @@ p
     position: relative
     width: 100%
     max-width: 600px
-    height: calc(90% - #{$contentmargin} - #{$footerheight} - 40px)
-    min-height: 250px
+    // height: calc(90% - #{$contentmargin} - #{$footerheight} - 40px)
+    // min-height: 250px
     margin-top: $contentmargin
     margin-bottom: $footerheight + 20px
     margin-left: auto
@@ -197,15 +197,16 @@ p
     box-shadow: 40px 40px 0px 0px rgba($lightcolor, 0.2)
     overflow-x: hidden
 
-    &.shorter
-      height: 200px
+    // &.shorter
+    //   height: 200px
 
     .md
       display: block
-      position: absolute
+      // position: absolute
       width: 100%
       height: calc(100% - 4em)
       padding: 0em 1em
+      padding-bottom: 2em
       box-sizing: border-box
       overflow-y: auto
       font-size: 1em
@@ -263,6 +264,12 @@ p
         cursor: pointer
         padding: 0.2em
 
+@keyframes pauseFlash
+  0%
+    background-color: $lightcolor
+  100%
+    background-color: $accentcolor
+
 #player
   display: block
   position: fixed
@@ -270,7 +277,7 @@ p
   left: -20px
   height: 20px
   width: calc(100% + 100px + 20px)
-  overflow: hidden
+  // overflow-x: hidden
   background-color: $bgcolor
   z-index: 100
 
@@ -301,6 +308,12 @@ p
       opacity: 0
       width: 0px
       height: 0px
+
+    &.mobileFlash
+      animation: pauseFlash
+      animation-duration: 0.8s
+      animation-direction: alternate
+      animation-iteration-count: infinite
 
     svg
       color: $bgcolor
