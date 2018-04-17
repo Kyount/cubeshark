@@ -15,7 +15,7 @@ var trackList = [
     title: 'Silence Thumping',
     image: '/img/SevenYears.jpg',
     cat: 'Music',
-    desc: 'Released in 2016. Part of the "Seven Years Album". I wanted to express a victorious and positive mood in the guise of a evolving and surprising composition. Inspirations include IDM/experimental musicians such as The Flashbulb and Wisp (AKA Dwaallicht).'
+    desc: 'Released in 2016. Part of the "Seven Years Album". I wanted to express a victorious and positive mood in the guise of an evolving and surprising composition. Inspirations include IDM/experimental musicians such as The Flashbulb and Wisp (AKA Dwaallicht).'
   },
   {
     showDesc: false,
@@ -31,7 +31,7 @@ var trackList = [
     title: 'The Seventh Year',
     image: '/img/SevenYears.jpg',
     cat: 'Music',
-    desc: 'Released in 2018. Part of the "Seven Years Album". I wanted to express my optimism for the current year (2018) and provice a nice end to the album as a whole. The title (and the album name as well) is a reference to the number of years that passed since I released my first EP in 2010.'
+    desc: 'Released in 2018. Part of the "Seven Years Album". I wanted to express my optimism for the current year (2018) and provide a nice ending to the album as a whole. The title (and the album name as well) is a reference to the number of years that passed since I released my first EP in 2010.'
   },
   {
     showDesc: false,

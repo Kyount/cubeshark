@@ -21,7 +21,7 @@ $lightcolor: #252525
 $neutralcolor: #252525
 $darkcolor: #CCCCCC
 $bgcolor: #FFFFFF
-$accentcolor: #17936f
+$accentcolor: #8acd94
 
 $headerheight: 70px
 $footerheight: 50px
@@ -184,9 +184,9 @@ p
     position: relative
     width: 100%
     max-width: 600px
-    height: calc(80% - #{$contentmargin} - #{$footerheight} - 40px)
-    // min-height: 400px
-    margin-top: $contentmargin + 20px
+    height: calc(90% - #{$contentmargin} - #{$footerheight} - 40px)
+    min-height: 250px
+    margin-top: $contentmargin
     margin-bottom: $footerheight + 20px
     margin-left: auto
     margin-right: auto
@@ -195,9 +195,10 @@ p
     border: 2px solid $neutralcolor
     box-sizing: border-box
     box-shadow: 40px 40px 0px 0px rgba($lightcolor, 0.2)
+    overflow-x: hidden
 
     &.shorter
-      height: calc(50% - #{$contentmargin} - #{$footerheight} - 40px)
+      height: 200px
 
     .md
       display: block
@@ -215,26 +216,28 @@ p
 
       p
         font-size: 1rem
-        @include media("<small")
-          font-size: 0.8rem
+        // @include media("<small")
+        //   font-size: 0.8rem
 
-      .visitSC
+      .visitLinks
         display: flex
         width: 100%
         height: 3em
         padding-top: 0.7em
-        justify-content: center
+        justify-content: flex-start
 
         a
           display: flex
           background-color: $bgcolor
           color: $lightcolor
           padding: 1em
-          font-size: 1.5em
+          font-size: 1.3em
           box-sizing: border-box
           align-items: center
           border-radius: 0.2em
           text-decoration: none
+          margin-right: 1em
+          cursor: pointer
 
     .infoPortrait
       height: 9em
@@ -249,7 +252,7 @@ p
 
     .closeInfo
       width: 100%
-      height: 2em
+      height: 1.5em
       font-size: 2em
       margin: 0px
       text-align: right
@@ -366,6 +369,9 @@ p
       padding: 10px
       box-sizing: border-box
       flex-wrap: wrap
+      transition: background-color 0.3s ease-in-out
+      &:hover
+        background-color: $accentcolor
 
       .soundLink
         display: flex
@@ -408,6 +414,7 @@ p
         max-height: 50px
         margin-left: 20px
         cursor: pointer
+        transition: color 0.1s ease-in-out
 
         span
           display: flex
@@ -443,7 +450,7 @@ p
 
 //descslide
 .descslide-enter-active, .descslide-leave-active
-  transition: all 0.5s ease-in-out
+  transition: max-height 0.5s ease-in-out
 
 .descslide-enter, .descslide-leave-to
   max-height: 0px !important
