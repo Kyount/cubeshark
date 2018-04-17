@@ -7,7 +7,7 @@ var trackList = [
     title: 'Grace',
     image: '/img/SevenYears.jpg',
     cat: 'Music',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+    desc: 'Released in 2016. Part of the "Seven Years" album. I was inspired by the simple but powerful sound of the Roland 808 Bass and aimed to have it stand out as the driving force behind this song. Another source of inspiration being the Art Of Noise, an early 90\'s electronic band, specifically the song "Moments in Love".'
   },
   {
     showDesc: false,
@@ -15,7 +15,7 @@ var trackList = [
     title: 'Silence Thumping',
     image: '/img/SevenYears.jpg',
     cat: 'Music',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+    desc: 'Released in 2016. Part of the "Seven Years Album". I wanted to express a victorious and positive mood in the guise of a evolving and surprising composition. Inspirations include IDM/experimental musicians such as The Flashbulb and Wisp (AKA Dwaallicht).'
   },
   {
     showDesc: false,
@@ -23,7 +23,7 @@ var trackList = [
     title: 'The Journey',
     image: '/img/SevenYears.jpg',
     cat: 'Music',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+    desc: 'Released in 2018. Part of the "Seven Years Album". Started as my own take on the "Future Bass" genre. The voice sample was taken from a TTS program; it reads aloud Romans 12:2.'
   },
   {
     showDesc: false,
@@ -31,7 +31,7 @@ var trackList = [
     title: 'The Seventh Year',
     image: '/img/SevenYears.jpg',
     cat: 'Music',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+    desc: 'Released in 2018. Part of the "Seven Years Album". I wanted to express my optimism for the current year (2018) and provice a nice end to the album as a whole. The title (and the album name as well) is a reference to the number of years that passed since I released my first EP in 2010.'
   },
   {
     showDesc: false,
@@ -39,7 +39,7 @@ var trackList = [
     title: 'Mouthwash',
     image: '/img/RoughDrafts.jpg',
     cat: 'Music',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+    desc: 'Released in 2009. Part of the "Rough Drafts" EP. One of my first experiments with FM synthesis being used to create an evolving texture.'
   },
   {
     showDesc: false,
@@ -47,7 +47,7 @@ var trackList = [
     title: 'Chaos Control',
     image: '/img/RoughDrafts.jpg',
     cat: 'Music',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+    desc: 'Released in 2010. Part of the Rough Drafts EP. The bass line is actually a feedback loop tuned to the key of "A" and modulated with filters and delay.'
   },
   {
     showDesc: false,
@@ -55,7 +55,7 @@ var trackList = [
     title: 'Exterminator Project',
     image: null,
     cat: 'Video Game',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+    desc: 'Created in 2012. A looping track I made for a friend\'s video game project. The original project included a beginning intro cap to start off the loop in-game.'
   },
   {
     showDesc: false,
@@ -63,7 +63,7 @@ var trackList = [
     title: 'Dr. Max: Maintitle',
     image: null,
     cat: 'Soundtrack',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+    desc: 'Created in 2018. I was asked by a client to pitch a song for a television main title intro. Referenced a video while composing to time the song elements in sync with the video.'
   },
   {
     showDesc: false,
@@ -71,7 +71,7 @@ var trackList = [
     title: 'Oceana: Studio Logo',
     image: null,
     cat: 'Soundtrack',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+    desc: 'Created in 2018. I was asked by a client to pitch a composition for a short studio logo animation. Referenced a video while composing to time the composition in sync with the animation.'
   },
   {
     showDesc: false,
@@ -79,7 +79,7 @@ var trackList = [
     title: 'Sony Crackle: Startup',
     image: null,
     cat: 'Soundtrack',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+    desc: 'Created in 2017. Created for a promo/advertisement for a Sony Crackle original series, "Startup". Referenced a video while composing to time the composition elements in sync with the video.'
   },
   {
     showDesc: false,
@@ -87,7 +87,7 @@ var trackList = [
     title: 'Otto Motors',
     image: null,
     cat: 'Soundtrack',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+    desc: 'Created in 2017. I was asked by a client with short notice to create a composition for a promotional video for a robotics company. I went for a retro vibe with heavy use of legacy instruments.'
   },
   {
     showDesc: false,
@@ -95,7 +95,7 @@ var trackList = [
     title: 'Creation Destruction',
     image: null,
     cat: 'Soundtrack',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac malesuada ipsum, eget ullamcorper ex. Quisque scelerisque, dolor vel scelerisque molestie, enim eros finibus nunc, quis porta lorem ipsum sit amet turpis. Morbi aliquam sem a pharetra convallis. Sed commodo varius blandit. Aenean maximus libero ut lacus ultricies bibendum. In fermentum porttitor mattis.'
+    desc: 'Created in 2018 for a friend\'s student project. My friend described a rough idea of their video and were planning to edit around my composition, so I was given a lot of creative freedom.'
   }
 ];
 

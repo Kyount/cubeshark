@@ -85,21 +85,24 @@
     </div>
 
     <transition name="infofade">
-      <div id="about" class="infoContainer" v-show="aboutBox == true" v-on:click="hideAbout">
+      <div id="about" class="infoContainer" v-if="aboutBox == true" v-on:click="hideAbout">
         <div class="infoBox" v-on:click.stop>
           <div class="closeInfo" v-on:click="hideAbout"><i class="fas fa-window-close"></i></div>
           <div class="md">
-            <h1><span><img style="height: 50px; padding: 0px 15px" src="/img/CSOutline_invert.svg" alt=""></span>CUBESHARK MUSIC & SOUND DESIGN</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit nulla et ante sagittis imperdiet. Suspendisse convallis dignissim turpis, a auctor justo ornare sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris rhoncus laoreet neque, fermentum efficitur nisl fringilla vel. Morbi vitae varius metus. Praesent in tempor orci. Praesent sit amet lorem justo. Etiam nec posuere diam. In porttitor cursus luctus.</p>
-            <p>Nunc tempus, mauris nec ultrices vestibulum, lectus mi commodo sapien, in scelerisque ipsum nibh ac turpis. Fusce sagittis massa quis lobortis convallis. Maecenas imperdiet risus condimentum aliquam faucibus. Ut in ipsum nec ipsum cursus rhoncus id sit amet magna. Mauris sit amet lacinia nulla. Donec eu tortor nec risus hendrerit fermentum non vel magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet faucibus arcu, eu egestas magna. Duis a mauris gravida, aliquam enim dictum, mattis diam. Mauris facilisis nisl sit amet risus dictum fringilla. Nulla volutpat quam libero, et dignissim lorem commodo et. Mauris eu rhoncus nisi. Nam imperdiet, ligula eget congue aliquet, ex nulla feugiat nunc, et dignissim nulla mi a magna.</p>
-            <p>Mauris at sapien nibh. Ut in arcu consectetur, tincidunt tortor at, condimentum lectus. Nullam pellentesque, neque sed laoreet tincidunt, lectus ligula tincidunt turpis, et scelerisque lectus dui molestie eros. Etiam feugiat elit sed rutrum dignissim. Nunc posuere massa vitae pretium vestibulum. Praesent aliquam eget dolor vulputate egestas. Donec urna dolor, semper id sagittis ac, dapibus eu mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eros enim, viverra at pharetra eu, bibendum non nisl.</p>
+            <img src="/img/portrait.jpg" alt="" class="infoPortrait">
+            <h1>
+              <!-- <span><img style="height: 50px; padding: 0px 15px" src="/img/CSOutline_invert.svg" alt=""></span> -->
+              CUBESHARK MUSIC & SOUND DESIGN
+            </h1>
+            <p>Cubeshark is the musical alias of <b>Kyle Yount</b>, an electronic producer, composer, and sound designer. Having grown up in the Pacific Northwest, he is influenced by technology and nature, exhibiting a unique melodic and emotionally expressive style. He is a long-time user of Propellerheads Reason to produce music and has a certification in Sound Design from Berklee College of music in said program. Kyle produces music not only for listening but also for other media such as film and video games. The list on this site is a curated selection of his work a full list including older and unfinished pieces can be found on his SoundCloud page.</p>
+            <div class="visitSC"><a href="https://soundcloud.com/cubeshark"><i class="fab fa-soundcloud"></i>&nbsp Visit SoundCloud</a></div>
           </div>
         </div>
       </div>
     </transition>
 
     <transition name="infofade">
-      <div id="contact" class="infoContainer" v-show="contactBox == true" v-on:click="hideContact">
+      <div id="contact" class="infoContainer" v-if="contactBox == true" v-on:click="hideContact">
         <div class="infoBox shorter" v-on:click.stop>
           <div class="closeInfo" v-on:click="hideContact"><i class="fas fa-window-close"></i></div>
           <div class="md" style="text-align:center">
@@ -113,16 +116,16 @@
     <div id="footer">
       <div class="social">
         <div class="s_item">
-          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.facebook.com/cubeshark/"><i class="fab fa-facebook"></i></a>
         </div>
         <div class="s_item">
-          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href="https://twitter.com/cubeshark"><i class="fab fa-twitter"></i></a>
         </div>
         <div class="s_item">
-          <a href=""><i class="fab fa-bandcamp"></i></a>
+          <a href="https://cubeshark.bandcamp.com/"><i class="fab fa-bandcamp"></i></a>
         </div>
         <div class="s_item">
-          <a href=""><i class="fab fa-soundcloud"></i></a>
+          <a href="https://soundcloud.com/cubeshark"><i class="fab fa-soundcloud"></i></a>
         </div>
       </div>
     </div>
