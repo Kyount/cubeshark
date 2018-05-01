@@ -74,9 +74,9 @@
 
     <div id="simpleTunes">
       <div id="music">
-        <div class="soundBoxWrap" v-for="(track, index) in tracks">
+        <div :class="{soundBoxWrap: true, announcement: track.cat == 'Announcement'}" v-for="(track, index) in tracks">
           <div class="soundBox">
-            <div class="soundLink">
+            <div v-if="track.track" class="soundLink">
               <a @click="loadTrack('https://soundcloud.com/cubeshark/', index), toggleDescription(index, true)">
                 <i class="playbutton fas fa-play"></i>
               </a>
@@ -84,12 +84,12 @@
             <div class='trackTitle' @click="toggleDescription(index, false)">
               <span>{{track.title}}</span>
             </div>
-            <div class="trackCategory"><span>{{track.cat}}</span></div>
+            <div v-if="track.cat != 'Announcement'" class="trackCategory"><span>{{track.cat}}</span></div>
           </div>
           <transition name="descslide">
             <div class="trackDesc" v-show="track.showDesc">
               <img v-if="track.image != null" :src=track.image alt="Track Image">
-              <p>{{track.desc}}</p>
+              <p v-html="track.desc"></p>
             </div>
           </transition>
         </div>

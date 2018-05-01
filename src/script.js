@@ -3,6 +3,14 @@ var mobileInterval;
 var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
 var trackList = [
   {
+    showDesc: true,
+    track: null,
+    title: "Pre-order the new album!",
+    image: 'img/SevenYears.jpg',
+    cat: 'Announcement',
+    desc: 'The \"Seven Years\" album from Cubeshark is releasing on May 25th through Bandcamp.<br><br><a href="https://cubeshark.bandcamp.com" target="_blank">PREORDER HERE</a>'
+  },
+  {
     showDesc: false,
     track: 'grace',
     title: 'Grace',
