@@ -266,6 +266,28 @@ p
         cursor: pointer
         padding: 0.2em
 
+    .credits
+      @extend .md
+      opacity: 0.2
+      position: relative
+      top: 20px
+      text-align: right
+      font-size: 0.8em
+      padding: 0em
+      margin-top: 1em
+      overflow-y: initial
+      transition: opacity 0.3s ease-in-out
+      &:hover
+        opacity: 1
+      a
+        text-decoration: none
+        background-color: $bgcolor
+        color: $lightcolor
+        border-radius: 50px
+        padding: 0.1em 1em
+
+
+
 @keyframes pauseFlash
   0%
     background-color: $lightcolor
