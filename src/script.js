@@ -5,10 +5,10 @@ var trackList = [
   {
     showDesc: true,
     track: null,
-    title: "Pre-order the new album!",
-    image: 'img/SevenYears.jpg',
+    title: "New Album",
+    image: null,
     cat: 'Announcement',
-    desc: 'The \"Seven Years\" album from Cubeshark is releasing on May 25th through Bandcamp.<br><br><a href="https://cubeshark.bandcamp.com" target="_blank">PREORDER HERE</a>'
+    desc: '<img style="max-width:100%;float:none;margin:0px;margin-bottom:20px" src="/img/sevenyearsannouncement.gif"><div style="width:100%;text-align:center"><a href="https://cubeshark.bandcamp.com" target="_blank">PREORDER HERE</a></div>'
   },
   {
     showDesc: false,
