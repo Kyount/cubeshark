@@ -5,7 +5,7 @@ var trackList = [
   {
     showDesc: true,
     track: null,
-    title: "Out Now!",
+    title: "Album - Seven Years",
     image: null,
     cat: 'Announcement',
     desc: '<img style="max-width:100%;float:none;margin:0px;margin-bottom:20px" src="/img/sevenyearsannouncement.png"><div style="width:100%;text-align:center"><a href="https://cubeshark.bandcamp.com/album/seven-years" target="_blank">PURCHASE HERE</a></div>'
